@@ -1,12 +1,8 @@
 <template>
  <div>
-   <div class="demo" :style="{backgroundColor: color}"></div>
-   <div class="demo"></div>
-   <div class="demo"></div>
-   <hr>
-
-   <input type="text" v-model="color">
-
+   <ul>
+     <li v-for="(ingredient,i) in ingredients">{{ingredient}} {{i}}</li>
+   </ul>
  </div>
   
 
@@ -17,7 +13,12 @@
 export default {
   data() {
     return{
-      color: 'green'
+
+      ingredients: ['meat','fruit','cookies'],
+      persons:[
+        {name: 'max',age: 27, color:'red'},
+        {name: 'jack',age: 28, color:'blue'},
+      ]
     };
     
   }
