@@ -3,6 +3,15 @@
    <ul>
      <li v-for="(ingredient,i) in ingredients">{{ingredient}} {{i}}</li>
    </ul>
+   <hr>
+
+   <ul>
+     <li v-for="person in persons">
+       <div v-for="(value,key) in person">
+         {{key}} : {{value}} 
+       </div>
+      </li>
+   </ul>
  </div>
   
 
