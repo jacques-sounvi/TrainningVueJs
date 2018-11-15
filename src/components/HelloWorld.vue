@@ -3,6 +3,7 @@
    <ul>
      <li v-for="(ingredient,i) in ingredients">{{ingredient}} {{i}}</li>
    </ul>
+   <button @click="ingredients.push('spices')">Add new</button>
    <hr>
 
    <ul>
