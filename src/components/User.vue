@@ -4,13 +4,17 @@
         <p>I'm an awesome {{name}}</p>
         <button @click="ChangeName">Change name</button>
         <p>{{name}}</p>
+
         <hr>
         <div class="row">
             <div class="col-xs-12 col-sm-6">
-                <app-user-detail :myName="name" @nameWasReset="name = $event"></app-user-detail>
+                <app-user-detail 
+                :myName="name" 
+                @nameWasReset="name = $event"
+                :userAge="age"></app-user-detail>
             </div>
             <div class="col-xs-12 col-sm-6">
-                <app-user-edit></app-user-edit>
+                <app-user-edit @ageWasChanged="age = $event"></app-user-edit>
             </div>
         </div>
     </div>
@@ -27,7 +31,8 @@
         },
          data(){
            return{
-               name: 'max'
+               name: 'max',
+               age: 27
            };
        },
        methods:{

@@ -3,6 +3,7 @@
         <h3>You may view the User Details here</h3>
         <p>Many Details</p>
         <p>User Name : {{swithName()}} </p>
+        <p>User Age: {{userAge}}</p>
          <button @click="ResetName">Reset name</button>
 
     </div>
@@ -10,7 +11,12 @@
 
 <script>
     export default{
-        props: ['myName'],
+        props: {
+            myName:{
+                type: String
+            },
+            userAge: Number
+        },
         methods:{
             swithName(){
                 return this.myName.split("").reverse().join("");
