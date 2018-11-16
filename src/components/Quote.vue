@@ -1,6 +1,12 @@
 <template>
     <div>
-        <slot></slot>
+       <div class="title">
+           <slot name="title"></slot>
+       </div>
+       <hr>
+       <div>
+           <slot name="content"></slot>
+       </div>
     </div>
 </template>
 
@@ -16,5 +22,8 @@ export default {
         box-shadow: 1px 1px 2px black;
         padding: 30px;
         text-align: center;
+    }
+    h2{
+        color:red
     }
 </style>
