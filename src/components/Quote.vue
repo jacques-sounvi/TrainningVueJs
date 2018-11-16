@@ -1,6 +1,6 @@
 <template>
     <div>
-        <p>A wonderful quote</p>
+        <slot></slot>
     </div>
 </template>
 
@@ -15,5 +15,6 @@ export default {
         border: 1px solid #cccccc;
         box-shadow: 1px 1px 2px black;
         padding: 30px;
+        text-align: center;
     }
 </style>
